@@ -16,28 +16,55 @@ public class Calculator {
 
 	private int total;
 	
+	/**
+	 * Class constructor initializes <code>total</code> to zero for clarity.
+	 */
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
 	}
 	
+	/**
+	 * This method returns the integer <code>total</code> .
+	 * @return the total
+	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
+	/**
+	 * This method adds the parameter to the total.
+	 * @param value integer to be added to total
+	 */
 	public void add (int value) {
-		
+		total += value;
 	}
 	
+	/**
+	 * This method subtracts the parameter from the total.
+	 * @param value integer to be subtracted from total
+	 */
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
+	/**
+	 * This method multiplies the parameter and the total.
+	 * @param value integer to be multiplied to total
+	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
+	/**
+	 * This method divides the total by the parameter. If the parameter
+	 * is zero, the total is set to zero.
+	 * @param value integer total is divided by
+	 */
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else	
+			total = total / value;
 	}
 	
 	public String getHistory () {
